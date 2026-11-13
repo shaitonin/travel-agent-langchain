@@ -1,0 +1,86 @@
+id,categoria,pergunta,resposta,ferramentas,autocorrigida,trajetoria_recall,trajetoria_recall_comentario,trajetoria_precisao,trajetoria_exata,correcao,correcao_comentario,fatos_chave,fundamentacao_nli,verificacao_aprovada,cita_fonte
+c01,api_externa,Vai chover em Lisboa amanhã?,"Em Lisboa, amanhã (14 de novembro de 2026), a previsão indica que haverá 65% de chance de chuva, com uma quantidade estimada de 0,2 mm. O dia será nublado, com temperaturas variando entre 14,9°C e 19,3°C. [Open-Meteo]",['previsao_tempo'],False,1.0,"esperado [['previsao_tempo']], chamado ['previsao_tempo']",1.0,1.0,1.0,"A resposta fornece a previsão do tempo para Lisboa, incluindo chance de chuva e temperaturas, conforme solicitado. Não há contradições ou invenções em relação à referência, pois os dados vêm de uma API em tempo real.",1.0,1.0,1.0,1.0
+c02,api_externa,Quanto valem 2.000 reais em euros hoje?,"Hoje, 2.000 reais valem aproximadamente 319,51 euros. A taxa de câmbio utilizada foi de 0,1598. [Frankfurter]",['converter_moeda'],False,1.0,"esperado [['converter_moeda']], chamado ['converter_moeda']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, que é o valor convertido de reais para euros. Não há contradição ou invenção de dados, pois a cotação é obtida em tempo real e não está na referência.",,1.0,1.0,1.0
+c03,rag,Brasileiro precisa de visto para ir a Roma?,"Brasileiros não precisam de visto para viajar a Roma, desde que a estadia seja de até 90 dias em um período de 180 dias. Essa regra se aplica a todos os países do Espaço Schengen, do qual a Itália faz parte. É importante lembrar que, em breve, será necessário solicitar uma autorização prévia online chamada ETIAS antes do embarque, mas isso ainda não está em vigor. Recomendo acompanhar as informações oficiais da União Europeia antes de viajar. [fonte: schengen_regras.md]",['buscar_regras_viagem'],False,1.0,"esperado [['buscar_regras_viagem']], chamado ['buscar_regras_viagem']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, que é a informação de que não precisa de visto para turismo de até 90 dias no Espaço Schengen. Não há contradições ou invenções em relação à referência.",1.0,1.0,1.0,1.0
+c04,rag,Posso levar carregador portátil na mala despachada?,"Não, você não pode levar carregadores portáteis (power banks) na mala despachada. Eles devem ser transportados apenas na bagagem de mão. Essa regra é comum para garantir a segurança durante o voo, já que as baterias de lítio podem representar riscos se não forem manuseadas corretamente. [fonte: bagagem_aerosul.md]",['buscar_regras_viagem'],False,1.0,"esperado [['buscar_regras_viagem']], chamado ['buscar_regras_viagem']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, afirmando que power banks/baterias de lítio só podem ser levados na bagagem de mão. Não há contradições ou informações inventadas em relação à referência.",1.0,0.67,1.0,1.0
+c05,rag,Preciso fazer algum cadastro online antes de ir pra Inglaterra?,"Sim, brasileiros precisam fazer um cadastro online antes de viajar para a Inglaterra. Desde janeiro de 2025, é necessário obter a ETA (Electronic Travel Authorisation), uma autorização eletrônica de viagem que deve ser solicitada antes do embarque. 
+
+O pedido pode ser feito pelo aplicativo oficial UK ETA ou pelo site do governo britânico (GOV.UK). A taxa é de 16 libras esterlinas por pessoa, e a resposta costuma sair em até 3 dias úteis, então é recomendável solicitar com antecedência. A ETA é válida por 2 anos ou até o vencimento do passaporte e permite várias entradas no país. 
+
+Lembre-se de que o Reino Unido não faz parte do Espaço Schengen, e o seguro de viagem não é obrigatório, mas é recomendado. [fonte: reino_unido_eta.md]",['buscar_regras_viagem'],False,1.0,"esperado [['buscar_regras_viagem']], chamado ['buscar_regras_viagem']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, que é a necessidade da ETA para viajar ao Reino Unido. Não há contradições ou invenções em relação à referência.",1.0,1.0,1.0,1.0
+c06,sql,Qual o voo direto mais barato de São Paulo para Paris em maio de 2027?,"O voo direto mais barato de São Paulo para Paris em maio de 2027 é o número AS1893, com partida em 6 de maio às 23:00, custando R$ 3.696,38. [banco: viagens.db]",['consultar_banco'],False,1.0,"esperado [['consultar_banco']], chamado ['consultar_banco']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, que é o voo AS1893 custando R$ 3.696,38. Não há contradições ou invenções em relação à referência.",1.0,1.0,1.0,1.0
+c07,sql,Quais hotéis em Roma têm opção vegana?,"Em Roma, há duas opções de hotéis com opção vegana:
+
+1. **Albergo Trastevere**
+   - Diária: R$ 437,23
+   - Nota: 8,9
+   - Localização: Trastevere
+   - Café da manhã: Não incluído
+
+2. **Roma Colosseo Suites**
+   - Diária: R$ 742,17
+   - Nota: 8,2
+   - Localização: Monti
+   - Café da manhã: Não incluído
+
+Se precisar de mais informações ou quiser fazer uma reserva, é só avisar! [banco: viagens.db]",['consultar_banco'],False,1.0,"esperado [['consultar_banco']], chamado ['consultar_banco']",1.0,1.0,1.0,A resposta menciona corretamente os dois hotéis listados na referência: Albergo Trastevere e Roma Colosseo Suites. Não há contradições ou invenções em relação à referência.,1.0,1.0,1.0,1.0
+c08,api_interna,Quais são as minhas reservas e o status de cada uma?,"Você possui as seguintes reservas:
+
+1. **Voo**:
+   - **Código**: AS1015
+   - **Origem**: GRU (São Paulo)
+   - **Destino**: LIS (Lisboa)
+   - **Data de início**: 16 de dezembro de 2026
+   - **Status**: Confirmada
+   - **Número de pessoas**: 2
+   - **Valor total**: R$ 9.172,14
+
+2. **Hotel**:
+   - **Nome**: Lisboa Tejo Palace
+   - **Cidade**: Lisboa
+   - **Data de início**: 16 de dezembro de 2026
+   - **Data de fim**: 23 de dezembro de 2026
+   - **Status**: Confirmada
+   - **Número de pessoas**: 2
+   - **Valor total**: R$ 12.361,37
+
+3. **Voo**:
+   - **Código**: AS1640
+   - **Origem**: OPO (Porto)
+   - **Destino**: GIG (Rio de Janeiro)
+   - **Data de início**: 17 de fevereiro de 2027
+   - **Status**: Pendente
+   - **Número de pessoas**: 1
+   - **Valor total**: R$ 2.916,74
+
+Se precisar de mais informações ou quiser fazer alterações, é só avisar!
+
+Fontes: [API de reservas]",['listar_reservas'],False,1.0,"esperado [['listar_reservas', 'consultar_banco']], chamado ['listar_reservas']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, listando as três reservas com os status corretos: duas confirmadas e uma pendente. Não há contradições ou invenções em relação à referência.",1.0,1.0,1.0,1.0
+c09,serverless,"Quanto custaria no total uma viagem de 7 dias para 2 pessoas, com passagem de 3.000 reais por pessoa e hotel de 600 reais a diária?","O custo total da viagem de 7 dias para 2 pessoas, considerando passagens de R$ 3.000 por pessoa e hotel de R$ 600 a diária, seria de R$ 19.506,50. Isso inclui:
+
+- Passagens: R$ 6.000,00
+- Hospedagem: R$ 4.200,00
+- Gastos locais: R$ 7.700,00
+- IOF (3,5%): R$ 416,50
+- Margem cambial (10%): R$ 1.190,00
+
+O custo por pessoa seria de R$ 9.753,25. Esses valores consideram um gasto diário de R$ 550 por pessoa (perfil moderado) e as taxas de IOF e margem cambial.
+
+Fontes: [função de custo]",['estimar_custo'],False,1.0,"esperado [['estimar_custo']], chamado ['estimar_custo']",1.0,1.0,1.0,"A resposta contém o valor total estimado de R$ 19.506,50, conforme a referência, e não contradiz a referência nem inventa dados inexistentes.",1.0,1.0,1.0,1.0
+c10,combinada,Tenho 10 mil reais para 5 dias em Barcelona: quanto dá por dia em euros e que documentos preciso para entrar?,"Com 10 mil reais, você terá aproximadamente 1597,57 euros para gastar em 5 dias em Barcelona, o que dá cerca de 319,51 euros por dia. 
+
+Para entrar na Espanha, você precisará dos seguintes documentos:
+1. Passaporte válido por pelo menos 3 meses após a data prevista de saída do Espaço Schengen.
+2. Passagem de volta ou de continuação da viagem.
+3. Comprovante de hospedagem (reserva de hotel) ou carta-convite.
+4. Seguro-viagem com cobertura mínima de 30.000 euros para despesas médicas e repatriação.
+5. Comprovante de meios de subsistência, que é de 75 euros por entrada mais 40 euros por dia de estadia, por pessoa.
+
+Certifique-se de ter todos esses documentos em ordem antes da sua viagem! [Frankfurter], [fonte: schengen_regras.md], [fonte: portugal_entrada.md]","['converter_moeda', 'buscar_regras_viagem']",False,1.0,"esperado [['converter_moeda'], ['buscar_regras_viagem']], chamado ['buscar_regras_viagem', 'converter_moeda']",1.0,1.0,1.0,"A resposta contém todos os elementos essenciais da referência: a conversão de 10 mil reais para euros e a divisão por 5 dias, além da lista de documentos necessários para entrada no Espaço Schengen, incluindo passaporte, seguro de 30 mil euros e passagem de volta. Não há contradições ou invenções em relação à referência.",1.0,0.86,1.0,1.0
+c11,combinada,Qual o voo mais barato de São Paulo para Londres em abril de 2027 e quanto é isso em libras?,"O voo mais barato de São Paulo para Londres em abril de 2027 é o número AS3367, com partida no dia 18 de abril às 14:30, custando R$ 3165,73. Convertendo esse valor, o custo em libras esterlinas é de aproximadamente £ 422,60. [banco: viagens.db], [Frankfurter]","['consultar_banco', 'converter_moeda']",False,1.0,"esperado [['consultar_banco'], ['converter_moeda']], chamado ['consultar_banco', 'converter_moeda']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência, que é o voo AS3367 por R$ 3.165,73. A conversão para libras é um detalhe adicional que vem de uma API em tempo real e não contradiz a referência.",1.0,1.0,1.0,1.0
+c12,memoria,Qual o voo direto mais barato saindo do Rio para lá nesse mês?,"O voo direto mais barato do Rio de Janeiro para Paris em março de 2027 é o número AS2051, com partida em 31 de março às 11:00. O preço é de R$ 4.337,01. Se precisar de mais informações ou quiser reservar, é só avisar! [banco: viagens.db]",['consultar_banco'],False,1.0,"esperado [['consultar_banco']], chamado ['consultar_banco']",1.0,1.0,1.0,"A resposta contém o essencial pedido pela referência: o voo AS2051 por R$ 4.337,01. Não há contradições ou invenções em relação à referência.",1.0,0.5,1.0,1.0
+c13,fora_escopo,Qual a capital da Austrália?,A capital da Austrália é Canberra.,[],False,1.0,,1.0,1.0,1.0,"A resposta contém a informação correta de que a capital da Austrália é Canberra, que é o essencial pedido pela referência.",,,1.0,1.0
+c14,alucinacao,Qual é o valor da taxa de embarque cobrada pela AeroSul em voos para Lisboa?,"Infelizmente, não consegui encontrar informações sobre a taxa de embarque da AeroSul em voos para Lisboa. O banco de dados que consulto não contém essa informação específica. Se precisar de mais alguma coisa, estou à disposição!
+
+Fontes: [banco: viagens.db]",['consultar_banco'],False,1.0,,1.0,1.0,1.0,"A resposta corretamente afirma que a informação não está disponível, conforme a referência exige.",,,1.0,1.0
+c15,erro_ferramenta,Quanto valem 500 reais em pesos argentinos?,"Infelizmente, não consigo fornecer a cotação do peso argentino (ARS) no momento, pois não tenho acesso a essa moeda. Posso ajudar com informações sobre outras moedas, como dólar, euro, libra, entre outras. Se precisar de ajuda com outra conversão, é só avisar!",[],False,1.0,,1.0,1.0,1.0,"A resposta explica corretamente que não consegue converter para pesos argentinos, conforme a referência, e não inventa uma cotação.",,,1.0,1.0

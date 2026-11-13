@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+# gerados em tempo de execução
+data/memoria/
+logs/*.log*
+.streamlit/secrets.toml
+scripts/

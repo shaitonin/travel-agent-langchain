@@ -1,0 +1,17 @@
+langchain==0.3.27
+langchain-community==0.3.29
+langchain-core==0.3.76
+langchain-openai==0.3.33
+langsmith==0.4.31
+faiss-cpu
+python-dotenv
+requests
+pandas
+matplotlib
+# Fase 5: verificação por NLI (modelo mDeBERTa-v3 multilíngue, baixado do Hugging Face na 1ª execução)
+torch
+transformers
+sentencepiece
+protobuf
+# Fase 5: interface
+streamlit
